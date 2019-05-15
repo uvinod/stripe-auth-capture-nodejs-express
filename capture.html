@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stripe test</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="basic.css">
+</head>
+<body>
+  <p>Customer has made a payment. Please proceed to capture the payment for the customer ID {{customerId}}. After 7 days, the uncaptured payment will be expired.</p>
+  <form action="/charge-capture" method="POST">
+    <input type="hidden" name="chargeId" value="{{chargeId}}" />
+    <input type="submit" name="Submit" value="Capture" />
+  </form>
+</body>
+</html>
+
